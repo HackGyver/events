@@ -1,0 +1,337 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{textpos}
+\usepackage{hyperref}
+
+% Get rid of the navigation bars
+\beamertemplatenavigationsymbolsempty
+% Change itemization markers to 'squares'
+\useinnertheme{rectangles}
+\setbeamertemplate{itemize items}[triangle]
+
+\author[DePierre]{Tao "DePierre" S.}
+\title{Initiation IRC}
+\institute[HackGyver]{\includegraphics[height=3cm,width=3cm]{images/LogoHackGyver.png}\\\large{Le hackerspace de Belfort}}
+\date{10 avril 2012}
+\logo{\includegraphics[height=1.5cm,width=1.5cm]{images/LogoHackGyver.png}}
+
+\begin{document}
+
+% Title page
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+% Table of contents
+\begin{frame}{Plan}
+	\tableofcontents
+\end{frame}
+
+% Options for the display of the table of contents
+\AtBeginSubsection[]
+{
+   \begin{frame}
+        \frametitle{Initiation IRC}
+        \tableofcontents[ 
+    		currentsubsection, 
+    		currentsubsections, 
+    	] 
+   \end{frame}
+}
+
+% First part: in few words
+\section{En quelques mots}
+
+\begin{frame}{En quelques mots}
+\begin{itemize}
+	\itemsep1.3em
+		\item Création 1988
+		\item Protocole ouvert basé sur TCP
+		\begin{itemize}
+			\item Port 6667 par défaut
+		\end{itemize}
+		\item Composé de
+		\begin{itemize}
+			\item Serveurs
+			\item Clients (présentés ici)
+		\end{itemize}
+		\item \href{https://tools.ietf.org/html/rfc1459}{RFC irc2.4.0}
+		\begin{itemize}
+			\item Non respectée par tous
+			\item Plusieurs révisions effectuées
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{En quelques mots}
+\begin{itemize}	
+	\itemsep1.3em
+		\item Communication entre les serveurs
+		\begin{itemize}
+			\item Étend le réseau
+		\end{itemize}
+		\item Salons de discutions (a.k.a channel)
+		\item Chat privé possible
+		\item Échanges de fichiers possibles
+		\begin{itemize}
+			\item Nécessite ouverture de ports
+			\item Non détaillé ici
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+% Second part: some clients
+\section{Clients connus}
+
+	\subsection{XChat} % XChat
+\begin{frame}{XChat}
+\begin{columns}
+	\column{.5\textwidth}
+		\begin{itemize}	
+			\itemsep1.3em
+				\item Client pour
+				\begin{itemize}
+					\item Linux
+					\item Mac OS X
+					\item Windows
+				\end{itemize}
+				\item Interface graphique (GTK+)
+				\item Système de scripts/plugins
+				\item Code source sous licence GPL
+		\end{itemize}
+	\column{1\textwidth}
+		\href{https://commons.wikimedia.org/wiki/File:Logo_xchat.png}{\hspace{3cm} \includegraphics[width=0.15\textwidth]{images/Logo_xchat.png}}
+\end{columns}
+\end{frame}
+
+\begin{frame}{XChat}
+\begin{itemize}	
+	\itemsep1.3em
+		\item Avantages
+		\begin{itemize}
+			\item Très complet
+			\item Très user-friendly
+			\item Ultra personnalisable
+		\end{itemize}
+		\item Inconvénients
+		\begin{itemize}
+			\item Assez lourd (relatif)
+			\item Configuration plus difficile à transporter
+		\end{itemize}
+\end{itemize}
+\begin{center}
+	\textbf{Accueil} : \url{http://www.silverex.org/}
+\end{center}
+\end{frame}
+
+	\subsection{AdiIRC} % AdiIRC
+\begin{frame}{AdiIRC}
+\begin{columns}
+	\column{.5\textwidth}
+		\begin{itemize}	
+			\itemsep1.3em
+				\item Client pour
+				\begin{itemize}
+					\item Windows
+				\end{itemize}
+				\item Interface graphique (.NET 2.0)
+				\item Système de scripts/plugins
+		\end{itemize}
+	\column{1\textwidth}
+		\href{https://danielsan89.deviantart.com/art/adiIRC-dock-icon-69465482}{\hspace{3cm} \includegraphics[width=0.15\textwidth]{images/adiIRC_dock_icon_by_Danielsan89.png}}
+\end{columns}
+\end{frame}
+
+\begin{frame}{AdiIRC}
+\begin{itemize}	
+	\itemsep1.3em
+		\item Avantages
+		\begin{itemize}
+			\item Très léger
+			\item User-friendly
+			\item Configuration très simple à transporter
+		\end{itemize}
+		\item Inconvénients
+		\begin{itemize}
+			\item Ne fonctionne que pour Windows
+			\item Vitesse de développement variable
+			\item Documentation faible pour les plugins
+		\end{itemize}
+\end{itemize}
+\begin{center}
+	\textbf{Accueil} : \url{http://www.adiirc.com/}
+\end{center}
+\end{frame}
+
+	\subsection{WeeChat} % WeeChat
+\begin{frame}{WeeChat}
+\begin{columns}
+	\column{.5\textwidth}
+		\begin{itemize}	
+			\itemsep1.3em
+				\item Client pour
+				\begin{itemize}
+					\item BSD
+					\item Linux
+					\item Mac OS X
+				\end{itemize}
+				\item Pas d'interface graphique
+				\item Système de scripts/plugins
+				\item Logiciel libre
+		\end{itemize}
+	\column{1\textwidth}
+		\href{https://commons.wikimedia.org/wiki/File:Weechat_logo.png}{\hspace{3cm} \includegraphics[width=0.25\textwidth]{images/Weechat_logo.png}}
+\end{columns}
+\end{frame}
+
+\begin{frame}{WeeChat}
+\begin{itemize}	
+	\itemsep1.3em
+		\item Avantages
+		\begin{itemize}
+			\item Ultra léger
+			\item Ultra personnalisable
+			\item Développement très actif
+		\end{itemize}
+		\item Inconvénients
+		\begin{itemize}
+			\item Moins user-friendly
+			\item Configuration parfois difficile à transporter
+		\end{itemize}
+\end{itemize}
+\begin{center}
+	\textbf{Accueil} : \url{http://www.weechat.org/}
+\end{center}
+\end{frame}
+
+% Third part: Surival guide for beginners
+\section{Commandes de survie}
+
+	\subsection{Serveur} % Server
+\begin{frame}{Serveur}
+\begin{itemize}	
+	\itemsep1.3em
+		\item /SERVER <server> [port]
+		\begin{itemize}
+			\item Se connecter à un serveur IRC
+			\item \textit{server} l'adresse du serveur
+			\item \textit{port} le port de connexion
+			\item \textit{Exemple : /SERVER irc.freenode.org 6667}
+		\end{itemize}
+		\item /LIST
+		\begin{itemize}
+			\item Liste les canaux du serveur
+		\end{itemize}
+\end{itemize}
+\end{frame}
+	
+	\subsection{Soi-même} % Oneself
+	
+\begin{frame}{Soi-même}
+\begin{itemize}	
+	\itemsep1.3em
+		\item /NICK <nickname>
+		\begin{itemize}
+			\item Change son pseudo
+			\item \textit{nickname} son pseudo
+			\item \textit{Exemple : /NICK John}
+		\end{itemize}
+		\item /ME <stuff\_im\_doing>
+		\begin{itemize}
+			\item Parle à la troisième personne
+			\item \textit{stuff\_im\_doing} ce que vous voulez dire
+			\item \textit{Exemple : /ME eat potoates}
+		\end{itemize}
+		\item /AWAY [reason]
+		\begin{itemize}
+			\item Se marque absent se marque présent
+			\item \textit{reason} la raison de votre absence
+			\item \textit{Exemple : /AWAY dodo}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Soi-même}
+\begin{itemize}	
+	\itemsep1.3em
+		\item /PART <channel> [, chan2, chan3] [reason]
+		\begin{itemize}
+			\item Quitte un canal/plusieurs canaux
+			\item \textit{channel} le nom du canal
+			\item \textit{Exemple : /PART \#hackgyver, \#bouloup}
+		\end{itemize}
+		\item /QUIT [reason]
+		\begin{itemize}
+			\item Quitte le serveur
+			\item \textit{reason} explique pourquoi
+			\item \textit{Exemple : /QUIT go to Paris}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+	
+	\subsection{Canal} % Channel
+\begin{frame}{Canal}
+\begin{itemize}	
+	\itemsep1.3em
+		\item /JOIN <channel>
+		\begin{itemize}
+			\item Se connecte à un canal
+			\item \textit{channel} le nom du canal
+			\item \textit{Exemple : /JOIN \#hackgyver}
+		\end{itemize}
+		\item /MSG <pseudo> <message>
+		\begin{itemize}
+			\item Envoie un message privé
+			\item \textit{pseudo} le pseudo du destinataire
+			\item \textit{message} le message à transmettre
+			\item \textit{Exemple : /MSG John hello there}
+		\end{itemize}
+		\item /QUERY <pseudo> [message]
+		\begin{itemize}
+			\item Ouvre un salon privé
+			\item \textit{pseudo} la personne que vous invité dans ce salon
+			\item \textit{message} le message à transmettre
+			\item \textit{Exemple : /QUERY John}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+% Fourth part: Demo time
+\section{Demo}
+\begin{frame}{Demo}
+\begin{center}
+	\Huge{DEMO} \\
+	\Large{Se connecter à HackGyver sur le serveur freenode}
+\end{center}
+\end{frame}
+
+% Fifth part: Conclusion
+\section{Conclusion}
+\begin{frame}{Conclusion}
+IRC c'est :
+\begin{itemize}
+	\itemsep1.3em
+		\item Une communauté énorme
+		\item De l'aide disponible en masse (\#archlinux, \#debian, \#root-me, ...)
+		\item Rapide et simple d'utilisation
+		\item De l'information en temps réel
+\end{itemize}
+\begin{center}
+	\Large{Rejoignez notre canal IRC \textbf{HackGyver@irc.freenode.org}}
+\end{center}
+\end{frame}
+
+% Sixth part: Questions
+\section{Questions}
+\begin{frame}{Questions ?}
+\begin{center}
+	\includegraphics[height=3cm,width=3cm]{images/LogoHackGyver.png} \\
+	\Huge{Questions ?}
+\end{center}
+\end{frame}
+
+\end{document}
